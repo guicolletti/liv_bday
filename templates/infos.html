@@ -1,41 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
-    <title>Informações</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+
+    <title>EUPHORIA_19</title>
+
+    <link rel="stylesheet" href="/static/css/infos.css">
+
 </head>
-<body>
 
-<div class="container">
+<body class="theme-{{ cartaz }}">
 
-    <h1>🎉 Informações do Evento</h1>
+    <div class="noise"></div>
+    <div class="scanlines"></div>
 
-    <p><strong>📅 Data:</strong> 20/07/2026</p>
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
 
-    <p><strong>🕒 Horário:</strong> 18h</p>
+    <div class="background-grid"></div>
 
-    <p><strong>📍 Local:</strong> Rua Exemplo, 123</p>
+    <div class="panel">
 
-    <p><strong>🍔 Teremos:</strong> Churrasco, bolo e refrigerante</p>
+        <div class="panel-header">
 
-    <hr>
+            <div>
 
-    <form action="/confirmar" method="POST">
+                <h1>AREA-51 DATABASE</h1>
 
-        <input
-            type="text"
-            name="nome"
-            placeholder="Digite seu nome"
-            required>
+                <p>CLASSIFIED INVITATION SYSTEM</p>
 
-        <button type="submit">
-            Confirmar Presença
-        </button>
+            </div>
 
-    </form>
+            <div class="status-dot">
 
-</div>
+                ● ONLINE
 
+            </div>
+
+        </div>
+
+        <div class="info-grid">
+
+            <div>
+
+                <span>Guest Status</span>
+
+                <strong>AUTHORIZED</strong>
+
+            </div>
+
+            <div>
+
+                <span>Security Level</span>
+
+                <strong>LEVEL 19</strong>
+
+            </div>
+
+            <div>
+
+                <span>Invitation File</span>
+
+                <strong>INVITATION_{{ cartaz }}.PNG</strong>
+
+            </div>
+
+        </div>
+
+        <div class="preview">
+
+            <div id="loader">
+
+                <div id="loader-terminal"></div>
+
+            </div>
+
+            <img id="convite" src="/static/img/template{{ cartaz }}.png">
+
+        </div>
+
+        <form action="/confirmar" method="POST">
+
+            <input type="text" name="nome" placeholder="Digite seu nome" required>
+
+            <button>
+
+                AUTHORIZE ATTENDANCE
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <div id="glitch-transition"></div>
+
+    <script src="/static/js/infos.js"></script>
+    <script src="/static/js/glitch.js"></script>
+    
 </body>
+
 </html>

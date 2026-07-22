@@ -1,25 +1,88 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
-    <title>Convite</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+
+    <title>AREA 51</title>
+
+    <link rel="stylesheet" href="/static/css/index.css">
+
 </head>
+
 <body>
+    <audio id="ambiente" src="/static/audio/fnaf3-ambience.mp3" preload="auto" loop></audio>
+    <audio id="glitch" src="/static/audio/fnaf-3-start-sound.mp3" preload="auto"></audio>
 
-<div class="container">
+    <div class="background-grid"></div>
+    <div class="noise"></div>
+    <div class="scanlines"></div>
 
-    <h1>🎂 Você está convidado!</h1>
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
 
-    <p>
-        Gostaria de participar do meu aniversário?
-    </p>
+    <div class="noise"></div>
 
-    <a href="/infos">
-        <button>Sim, quero participar!</button>
-    </a>
+    <div class="scanlines"></div>
 
-</div>
+    <div class="container">
+        <div id="boot-screen">
+
+            <h1>EUPHORIA DATABASE</h1>
+
+            <p id="boot-text"></p>
+
+        </div>
+
+        <div id="terminal-screen">
+
+            <div class="header">
+                EUPHORIA DATABASE
+            </div>
+
+            <div class="sub">
+                SYSTEM 19
+            </div>
+
+            <div class="terminal">
+                <div id="terminal-text"></div>
+            </div>
+
+            <div id="continue-box">
+
+                <p>ACCESS GRANTED</p>
+
+                <button onclick="transition('/infos')">
+                    CONTINUE
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+
+    <div id="glitch-transition"></div>
+    <script src="/static/js/glitch.js"></script>
+    <script src="/static/js/terminal.js"></script>
+    <script>
+    const audio = document.getElementById('ambiente');
+
+    document.addEventListener('click', () => {
+        audio.play().catch(err => {
+            console.error("Erro ao tocar áudio:", err);
+        });
+    }, { once: true });
+
+    audio.volume = 0.5;
+    </script>
 
 </body>
+
 </html>
