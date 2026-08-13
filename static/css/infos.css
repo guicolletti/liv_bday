@@ -30,23 +30,23 @@ body {
 
 }
 
-.panel {
+.panel{
 
-    width: min(1200px, 90%);
+    width:min(1200px,90%);
 
-    margin: 50px auto;
+    margin:50px auto;
 
-    padding: 40px;
+    padding:40px;
 
-    border: 2px solid var(--primary);
+    border:2px solid var(--primary);
 
-    box-shadow: 0 0 30px rgba(255, 255, 255, .2);
+    box-shadow:0 0 30px rgba(255,255, 255,.2);
 
-    background: #0a0a0a;
+    background:#0a0a0a;
 
-    position: relative;
+    position:relative;
 
-    z-index: 10;
+    z-index:10;
 
 }
 
@@ -840,12 +840,6 @@ button:hover {
 
 /* ========================================
    RESPONSIVIDADE
-   PÁGINA DE CONVITE
-======================================== */
-
-
-/* ========================================
-   TABLET
 ======================================== */
 
 @media (max-width: 900px) {
@@ -860,7 +854,6 @@ button:hover {
 
     }
 
-
     .panel-header h1 {
 
         font-size: 26px;
@@ -869,13 +862,11 @@ button:hover {
 
     }
 
-
     .info-grid {
 
         gap: 12px;
 
     }
-
 
     .preview {
 
@@ -884,7 +875,6 @@ button:hover {
         margin: 30px 0;
 
     }
-
 
     #loader {
 
@@ -896,7 +886,6 @@ button:hover {
 
     }
 
-
     #convite {
 
         max-width: 380px;
@@ -905,13 +894,11 @@ button:hover {
 
     }
 
-
     form {
 
         gap: 12px;
 
     }
-
 
     input {
 
@@ -928,105 +915,120 @@ button:hover {
 
 @media (max-width: 600px) {
 
-    body {
-        overflow-x: hidden;
+    html {
+
+        width: 100%;
+
+        height: 100%;
+
     }
 
-    /* ====================================
-       PAINEL CENTRALIZADO
-    ==================================== */
+    body {
+
+        width: 100%;
+
+        min-height: 100dvh;
+
+        margin: 0;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        padding: 15px 0;
+
+        overflow-x: hidden;
+
+    }
+
+
+    /* ------------------------------------
+       PAINEL
+    ------------------------------------ */
 
     .panel {
 
         width: 94%;
 
-        min-height: calc(100vh - 40px);
+        height: auto;
 
-        margin: 20px auto;
+        min-height: 0;
 
-        padding: 24px 16px;
+        margin: 0;
 
-        display: flex;
+        padding: 20px 15px;
 
-        flex-direction: column;
+        position: relative;
 
-        align-items: center;
+        flex-shrink: 0;
 
     }
 
 
-    /* ====================================
+    /* ------------------------------------
        HEADER
-    ==================================== */
+    ------------------------------------ */
 
     .panel-header {
 
-        width: 100%;
-
         flex-direction: column;
+
+        justify-content: center;
 
         align-items: center;
 
         text-align: center;
 
-        gap: 15px;
+        gap: 7px;
 
-        margin-bottom: 25px;
+        margin-bottom: 18px;
 
     }
 
     .panel-header h1 {
 
-        font-size: 22px;
+        font-size: 20px;
 
         letter-spacing: 3px;
-
-        line-height: 1.3;
 
     }
 
     .panel-header p {
 
-        font-size: 11px;
-
-        letter-spacing: 1px;
+        font-size: 8px;
 
     }
 
     .status-dot {
 
-        font-size: 12px;
+        font-size: 10px;
 
     }
 
 
-    /* ====================================
+    /* ------------------------------------
        INFORMAÇÕES
-    ==================================== */
+    ------------------------------------ */
 
     .info-grid {
 
         width: 100%;
 
-        max-width: 420px;
+        display: grid;
 
-        display: flex;
+        grid-template-columns: repeat(3, 1fr);
 
-        flex-direction: column;
+        gap: 6px;
 
-        align-items: center;
-
-        gap: 10px;
-
-        margin: 0 auto 20px auto;
+        margin-bottom: 15px;
 
     }
 
     .info-grid div {
 
-        width: 100%;
-
-        padding: 14px;
+        padding: 8px 4px;
 
         text-align: center;
 
@@ -1034,30 +1036,30 @@ button:hover {
 
     .info-grid span {
 
-        font-size: 11px;
+        font-size: 7px;
 
-        margin-bottom: 6px;
+        margin-bottom: 4px;
 
     }
 
     .info-grid strong {
 
-        font-size: 13px;
+        font-size: 8px;
 
     }
 
 
-    /* ====================================
-       ÁREA DO CONVITE
-    ==================================== */
+    /* ------------------------------------
+       PREVIEW
+    ------------------------------------ */
 
     .preview {
 
         width: 100%;
 
-        height: 500px;
+        height: 200px;
 
-        margin: 15px auto;
+        margin: 10px 0;
 
         display: flex;
 
@@ -1068,113 +1070,106 @@ button:hover {
     }
 
 
-    /* ====================================
+    /* ------------------------------------
        LOADER
-    ==================================== */
+    ------------------------------------ */
 
     #loader {
 
-        width: 100%;
+        width: 160px;
 
-        max-width: 400px;
+        height: 180px;
 
-        height: 470px;
-
-        padding: 18px;
+        padding: 10px;
 
     }
 
     #loader-terminal {
 
-        font-size: 13px;
+        font-size: 7px;
 
-        line-height: 1.7;
-
-        overflow-wrap: anywhere;
+        line-height: 1.5;
 
     }
 
 
-    /* ====================================
+    /* ------------------------------------
        CONVITE
-    ==================================== */
+    ------------------------------------ */
 
     #convite {
 
         width: auto;
 
-        max-width: 90%;
+        max-width: 160px;
 
-        max-height: 470px;
+        max-height: 180px;
 
     }
 
 
-    /* ====================================
-       FORMULÁRIO
-    ==================================== */
+    /* ------------------------------------
+       FORM
+    ------------------------------------ */
 
     form {
 
         width: 100%;
 
-        max-width: 420px;
+        margin: 15px 0 0;
 
         display: flex;
 
-        flex-direction: column;
+        flex-direction: row;
 
-        align-items: center;
+        align-items: stretch;
 
-        gap: 12px;
+        justify-content: center;
 
-        margin: 20px auto 0 auto;
+        gap: 8px;
 
     }
-
-
-    /* CAMPO DE NOME */
 
     form input {
 
-        width: 100%;
+        flex: 1;
 
-        height: 62px;
+        min-width: 0;
 
-        padding: 16px 18px;
+        width: auto;
 
-        font-size: 16px;
+        height: 48px;
+
+        padding: 10px 12px;
+
+        font-size: 13px;
 
     }
-
 
     form input::placeholder {
 
-        font-size: 14px;
+        font-size: 10px;
 
     }
-
-
-    /* BOTÃO */
 
     form button {
 
-        width: 100%;
+        flex-shrink: 0;
 
-        min-height: 58px;
+        min-height: 48px;
 
-        padding: 15px 20px;
+        padding: 10px 12px;
 
-        font-size: 12px;
+        font-size: 8px;
 
-        letter-spacing: 1px;
+        letter-spacing: .5px;
 
     }
 
 
-    /* ====================================
+    /* ------------------------------------
        CANTOS
-    ==================================== */
+    ------------------------------------ */
 
     .corner {
 
@@ -1185,33 +1180,45 @@ button:hover {
     }
 
     .tl {
+
         top: 10px;
+
         left: 10px;
+
     }
 
     .tr {
+
         top: 10px;
+
         right: 10px;
+
     }
 
     .bl {
+
         bottom: 10px;
+
         left: 10px;
+
     }
 
     .br {
+
         bottom: 10px;
+
         right: 10px;
+
     }
 
 
-    /* ====================================
+    /* ------------------------------------
        MODAL
-    ==================================== */
+    ------------------------------------ */
 
     #image-modal {
 
-        padding: 15px;
+        padding: 10px;
 
     }
 
@@ -1223,39 +1230,19 @@ button:hover {
 
     }
 
-    .modal-label {
-
-        top: 5px;
-
-        left: 5px;
-
-        max-width: 70%;
-
-        overflow: hidden;
-
-        text-overflow: ellipsis;
-
-        white-space: nowrap;
-
-        font-size: 9px;
-
-    }
-
     #modal-image {
 
         max-width: 92vw;
 
-        max-height: 78vh;
-
-        border-width: 1px;
+        max-height: 75vh;
 
     }
 
     #close-modal {
 
-        top: 5px;
+        top: 8px;
 
-        right: 5px;
+        right: 8px;
 
         width: 38px;
 
@@ -1267,331 +1254,15 @@ button:hover {
 
     #download-button {
 
+        margin-top: 15px;
+
         width: 90%;
 
-        max-width: 320px;
+        max-width: 300px;
 
         text-align: center;
 
-        padding: 14px 15px;
-
-        font-size: 11px;
-
-        margin-top: 18px;
-
-    }
-
-    /* ========================================
-   CENTRALIZAÇÃO MOBILE
-======================================== */
-
-    @media (max-width: 600px) {
-
-        body {
-
-            min-height: 100vh;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-        }
-
-
-        .panel {
-
-            width: 94%;
-
-            min-height: calc(100vh - 40px);
-
-            margin: 20px auto;
-
-            padding: 20px 15px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-
-            align-items: center;
-
-        }
-
-
-        .panel-header {
-
-            width: 100%;
-
-            margin-bottom: 18px;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            text-align: center;
-
-            gap: 8px;
-
-        }
-
-
-        .panel-header h1 {
-
-            font-size: 21px;
-
-            letter-spacing: 3px;
-
-        }
-
-
-        .panel-header p {
-
-            font-size: 9px;
-
-        }
-
-
-        .status-dot {
-
-            font-size: 10px;
-
-        }
-
-
-        /* ====================================
-       INFORMAÇÕES
-    ==================================== */
-
-        .info-grid {
-
-            width: 100%;
-
-            max-width: 420px;
-
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 7px;
-
-            margin: 0 auto 15px auto;
-
-        }
-
-
-        .info-grid div {
-
-            padding: 9px 5px;
-
-            text-align: center;
-
-        }
-
-
-        .info-grid span {
-
-            font-size: 8px;
-
-            margin-bottom: 4px;
-
-        }
-
-
-        .info-grid strong {
-
-            font-size: 9px;
-
-        }
-
-
-        /* ====================================
-       CONVITE
-    ==================================== */
-
-        .preview {
-
-            width: 100%;
-
-            height: 310px;
-
-            margin: 10px auto;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-        }
-
-
-        #loader {
-
-            width: 170px;
-
-            height: 240px;
-
-            padding: 12px;
-
-        }
-
-
-        #loader-terminal {
-
-            font-size: 8px;
-
-            line-height: 1.6;
-
-        }
-
-
-        #convite {
-
-            width: auto;
-
-            max-width: 170px;
-
-            max-height: 280px;
-
-        }
-
-
-        /* ====================================
-       FORMULÁRIO
-    ==================================== */
-
-        form {
-
-            width: 100%;
-
-            max-width: 380px;
-
-            margin: 10px auto 0;
-
-            display: flex;
-
-            flex-direction: row;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 8px;
-
-        }
-
-
-        form input {
-
-            flex: 1;
-
-            width: auto;
-
-            height: 38px;
-
-            padding: 8px 10px;
-
-            font-size: 11px;
-
-        }
-
-
-        form input::placeholder {
-
-            font-size: 9px;
-
-        }
-
-
-        form button {
-
-            flex: 0 0 auto;
-
-            width: auto;
-
-            min-height: 38px;
-
-            padding: 8px 12px;
-
-            font-size: 8px;
-
-            letter-spacing: .5px;
-
-        }
-
-    }
-
-}
-
-/* ========================================
-   CELULARES PEQUENOS
-======================================== */
-
-@media (max-width: 400px) {
-
-    .panel {
-
-        width: 94%;
-
-        margin: 20px auto;
-
-        padding: 24px 16px;
-
-    }
-
-
-    .panel-header h1 {
-
-        font-size: 19px;
-
-        letter-spacing: 2px;
-
-    }
-
-
-    .preview {
-
-        height: 430px;
-
-    }
-
-
-    #loader {
-
-        height: 410px;
-
-        padding: 15px;
-
-    }
-
-
-    #loader-terminal {
-
-        font-size: 11px;
-
-    }
-
-
-    #convite {
-
-        max-height: 400px;
-
-    }
-
-
-    .info-grid div {
-
-        padding: 10px;
-
-    }
-
-
-    form button {
-
-        font-size: 12px;
+        font-size: 10px;
 
     }
 
