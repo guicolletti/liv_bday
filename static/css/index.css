@@ -13,7 +13,7 @@ body{
 background:
 radial-gradient(circle at center,#0d1117,#050505);
 
-color:#00ff88;
+color:#FFFFFF;
 
 }
 
@@ -39,9 +39,9 @@ z-index:2;
 
 text-shadow:
 
-0 0 10px #00ff88,
+0 0 10px #FFFFFF,
 
-0 0 25px #00ff88;
+0 0 25px #FFFFFF;
 
 font-size:40px;
 
@@ -71,11 +71,11 @@ min-height:220px;
 
 padding:25px;
 
-border:1px solid #53ff53;
+border:1px solid #FFFFFF;
 
 background:rgba(0,0,0,.5);
 
-box-shadow:0 0 20px #00ff99;
+box-shadow:0 0 20px #FFFFFF;
 
 }
 
@@ -150,9 +150,9 @@ height:100%;
 
 background-image:
 
-linear-gradient(rgba(0,255,100,.08) 1px, transparent 1px),
+linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
 
-linear-gradient(90deg, rgba(0,255,100,.08) 1px, transparent 1px);
+linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
 
 background-size:50px 50px;
 
@@ -219,7 +219,7 @@ position:fixed;
 width:40px;
 height:40px;
 
-border:2px solid #00ff88;
+border:2px solid #FFFFFF;
 
 opacity:.7;
 
@@ -481,5 +481,613 @@ rgba(255,255,255,.08) 4px
 );
 
 opacity:0;
+
+}
+
+/* ========================================
+   CONFIRM PAGE
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+
+.confirm{
+
+    min-height:100vh;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #0d1117,
+        #050505
+    );
+
+    color:#FFFFFF;
+
+    font-family:'Share Tech Mono', monospace;
+
+    overflow:hidden;
+
+}
+
+
+/* ========================================
+   CONFIRMATION BOX
+======================================== */
+
+.confirm-box{
+
+    width:min(900px,90%);
+
+    padding:40px;
+
+    position:relative;
+
+    z-index:2;
+
+    background:rgba(0,0,0,.75);
+
+    border:1px solid #FFFFFF;
+
+    box-shadow:
+
+        0 0 20px rgba(255,255,255,.25),
+
+        inset 0 0 30px rgba(255,255,255,.03);
+
+    text-align:center;
+
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.confirm-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-bottom:20px;
+
+    margin-bottom:35px;
+
+    border-bottom:1px solid rgba(255,255,255,.25);
+
+    color:#FFFFFF;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+}
+
+.online{
+
+    color:#FFFFFF;
+
+    animation:statusPulse 1.5s infinite;
+
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.status{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border:1px solid #FFFFFF;
+
+    color:#FFFFFF;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    margin-bottom:30px;
+
+    box-shadow:
+
+        0 0 10px rgba(255,255,255,.2);
+
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.confirm-box h1{
+
+    color:white;
+
+    font-family:'Share Tech Mono', monospace;
+
+    font-size:clamp(30px,5vw,52px);
+
+    letter-spacing:5px;
+
+    margin-bottom:20px;
+
+    text-shadow:
+
+        0 0 10px rgba(255,255,255,.15);
+
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.confirm-box p{
+
+    color:rgba(255,255,255,.7);
+
+    font-size:18px;
+
+    letter-spacing:1px;
+
+}
+
+
+/* ========================================
+   SEPARATOR
+======================================== */
+
+.confirm-line{
+
+    width:100%;
+
+    height:1px;
+
+    margin:40px 0;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            #FFFFFF,
+
+            transparent
+
+        );
+
+    opacity:.5;
+
+}
+
+
+/* ========================================
+   SESSION INFO
+======================================== */
+
+.session-info{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(3,1fr);
+
+    gap:12px;
+
+    margin-bottom:40px;
+
+}
+
+.session-info div{
+
+    padding:18px 10px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(0,0,0,.35);
+
+}
+
+.session-info span{
+
+    display:block;
+
+    color:rgba(255,255,255,.4);
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    margin-bottom:8px;
+
+}
+
+.session-info strong{
+
+    display:block;
+
+    color:#FFFFFF;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+}
+
+
+/* ========================================
+   EXIT BUTTON
+======================================== */
+
+.btn-main{
+
+    display:inline-block;
+
+    padding:13px 35px;
+
+    border:1px solid #FFFFFF;
+
+    color:#FFFFFF;
+
+    background:transparent;
+
+    text-decoration:none;
+
+    font-family:'Share Tech Mono', monospace;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+
+}
+
+.btn-main:hover{
+
+    background:#FFFFFF;
+
+    color:#050505;
+
+    box-shadow:
+
+        0 0 20px #FFFFFF;
+
+}
+
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes statusPulse{
+
+    0%,
+    100%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.4;
+
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media(max-width:700px){
+
+    .confirm-box{
+
+        width:90%;
+
+        padding:25px 20px;
+
+    }
+
+    .confirm-header{
+
+        font-size:10px;
+
+    }
+
+    .confirm-box h1{
+
+        font-size:30px;
+
+        letter-spacing:2px;
+
+    }
+
+    .session-info{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+.exit-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#050505;
+
+    color:#FFFFFF;
+
+    text-align:center;
+
+    font-family:'Share Tech Mono', monospace;
+
+}
+
+.exit-screen div{
+
+    animation:exitAppear 1s ease forwards;
+
+}
+
+.exit-screen span{
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    opacity:.6;
+
+}
+
+.exit-screen h1{
+
+    margin-top:25px;
+
+    font-size:clamp(25px,5vw,45px);
+
+    letter-spacing:6px;
+
+    text-shadow:
+
+        0 0 10px #FFFFFF,
+
+        0 0 25px #FFFFFF;
+
+}
+
+.exit-screen p{
+
+    margin-top:20px;
+
+    color:rgba(255,255,255,.5);
+
+}
+
+@keyframes exitAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ========================================
+   INDEX - RESPONSIVIDADE
+======================================== */
+
+@media (max-width:700px){
+
+    #boot-screen h1{
+
+        font-size:32px;
+
+        letter-spacing:6px;
+
+        text-align:center;
+
+    }
+
+
+    #boot-text{
+
+        font-size:18px;
+
+        text-align:center;
+
+    }
+
+
+    .header{
+
+        font-size:28px;
+
+        letter-spacing:5px;
+
+        text-align:center;
+
+    }
+
+
+    .sub{
+
+        font-size:13px;
+
+        text-align:center;
+
+        margin-bottom:30px;
+
+    }
+
+
+    .terminal{
+
+        width:92%;
+
+        min-height:200px;
+
+        padding:18px;
+
+    }
+
+
+    #terminal-text{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+
+    #continue-box{
+
+        margin-top:25px;
+
+        font-size:14px;
+
+    }
+
+
+    #continue-box button{
+
+        padding:12px 25px;
+
+        font-size:12px;
+
+    }
+
+
+    .corner{
+
+        width:25px;
+
+        height:25px;
+
+    }
+
+
+    .tl{
+
+        top:10px;
+
+        left:10px;
+
+    }
+
+
+    .tr{
+
+        top:10px;
+
+        right:10px;
+
+    }
+
+
+    .bl{
+
+        bottom:10px;
+
+        left:10px;
+
+    }
+
+
+    .br{
+
+        bottom:10px;
+
+        right:10px;
+
+    }
+
+}
+
+
+@media (max-width:400px){
+
+    #boot-screen h1{
+
+        font-size:25px;
+
+        letter-spacing:4px;
+
+    }
+
+
+    #boot-text{
+
+        font-size:15px;
+
+    }
+
+
+    .header{
+
+        font-size:23px;
+
+        letter-spacing:3px;
+
+    }
+
+
+    .terminal{
+
+        padding:14px;
+
+    }
+
+
+    #terminal-text{
+
+        font-size:12px;
+
+    }
 
 }

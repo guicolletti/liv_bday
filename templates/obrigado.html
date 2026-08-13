@@ -7,16 +7,36 @@
 
     <title>CONFIRMED</title>
 
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/index.css">
 
 </head>
 
 <body class="confirm">
 
+    <div class="noise"></div>
+    <div class="scanlines"></div>
+
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+    <div class="background-grid"></div>
+
     <div class="confirm-box">
 
+        <div class="confirm-header">
+
+            <span>EUPHORIA DATABASE</span>
+
+            <span class="online">
+                ● ONLINE
+            </span>
+
+        </div>
+
         <div class="status">
-            ACCESS GRANTED
+            TRANSMISSION COMPLETE
         </div>
 
         <h1>
@@ -27,12 +47,38 @@
             Vejo você na EUPHORIA_19.
         </p>
 
+        <div class="confirm-line"></div>
+
+        <div class="session-info">
+
+            <div>
+                <span>ATTENDANCE</span>
+                <strong>CONFIRMED</strong>
+            </div>
+
+            <div>
+                <span>TRANSMISSION</span>
+                <strong>SUCCESSFUL</strong>
+            </div>
+
+            <div>
+                <span>ARCHIVE</span>
+                <strong>UPDATED</strong>
+            </div>
+
+        </div>
+
         <a href="/" class="btn-main">
-            RETURN
+            EXIT DATABASE
         </a>
 
     </div>
+
     <div id="glitch-transition"></div>
+
+    <script src="/static/js/glitch.js"></script>
+    <script src="/static/js/obrigado.js"></script>
+
 </body>
 
 </html>

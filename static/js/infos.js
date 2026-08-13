@@ -149,3 +149,55 @@ function finish(){
     },900);
 
 }
+
+// ========================================
+// IMAGE VIEWER
+// ========================================
+
+const imageModal = document.getElementById("image-modal");
+
+const closeModal = document.getElementById("close-modal");
+
+
+// ABRIR
+
+convite.addEventListener("click", function(){
+
+    imageModal.classList.add("active");
+
+});
+
+
+// FECHAR PELO X
+
+closeModal.addEventListener("click", function(){
+
+    imageModal.classList.remove("active");
+
+});
+
+
+// FECHAR CLICANDO FORA DA IMAGEM
+
+imageModal.addEventListener("click", function(event){
+
+    if(event.target === imageModal){
+
+        imageModal.classList.remove("active");
+
+    }
+
+});
+
+
+// FECHAR COM ESC
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+
+        imageModal.classList.remove("active");
+
+    }
+
+});

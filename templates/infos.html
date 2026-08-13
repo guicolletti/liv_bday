@@ -23,13 +23,14 @@
 
     <div class="background-grid"></div>
 
+
     <div class="panel">
 
         <div class="panel-header">
 
             <div>
 
-                <h1>AREA-51 DATABASE</h1>
+                <h1>EUPHORIA - DATABASE</h1>
 
                 <p>CLASSIFIED INVITATION SYSTEM</p>
 
@@ -42,6 +43,7 @@
             </div>
 
         </div>
+
 
         <div class="info-grid">
 
@@ -71,6 +73,7 @@
 
         </div>
 
+
         <div class="preview">
 
             <div id="loader">
@@ -79,13 +82,69 @@
 
             </div>
 
-            <img id="convite" src="/static/img/template{{ cartaz }}.png">
+
+            <img
+                id="convite"
+                src="/static/img/template{{ cartaz }}.png"
+                alt="Convite EUPHORIA_19"
+            >
 
         </div>
 
+
+        <!-- ======================================
+             IMAGE VIEWER
+        ======================================= -->
+
+        <div id="image-modal">
+
+            <button
+                id="close-modal"
+                aria-label="Fechar convite"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-content">
+
+                <div class="modal-label">
+
+                    INVITATION_FILE_{{ cartaz }}.PNG
+
+                </div>
+
+
+                <img
+                    id="modal-image"
+                    src="/static/img/template{{ cartaz }}.png"
+                    alt="Convite ampliado"
+                >
+
+
+                <a
+                    id="download-button"
+                    href="/static/img/template{{ cartaz }}.png"
+                    download="EUPHORIA_19_CONVITE.png"
+                >
+
+                    DOWNLOAD INVITATION
+
+                </a>
+
+            </div>
+
+        </div>
+
+
         <form action="/confirmar" method="POST">
 
-            <input type="text" name="nome" placeholder="Digite seu nome" required>
+            <input
+                type="text"
+                name="nome"
+                placeholder="Digite seu nome"
+                required
+            >
 
             <button>
 
@@ -97,11 +156,14 @@
 
     </div>
 
+
     <div id="glitch-transition"></div>
 
+
     <script src="/static/js/infos.js"></script>
+
     <script src="/static/js/glitch.js"></script>
-    
+
 </body>
 
 </html>
